@@ -19,7 +19,6 @@ import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import spring from "./tech/Spring.png";
 import sql from "./tech/Azure SQL Database.png";
-
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
