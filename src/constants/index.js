@@ -1,5 +1,4 @@
 import {
-  mobile,
   backend,
   creator,
   web,
@@ -10,20 +9,22 @@ import {
   reactjs,
   redux,
   tailwind,
-  nodejs,
   mongodb,
   git,
-  figma,
   docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
   carrent,
   jobit,
   tripguide,
-  threejs,
+  spring,
+  wheater,
+  sql,
+  authProjectImage,
+  image,
 } from "../assets";
+import xa from "../assets/company/xa.png";
+export { xa };
+import wehelp from "../assets/company/wehelp.jpeg";
+export { wehelp };
 
 export const navLinks = [
   {
@@ -46,16 +47,12 @@ const services = [
     icon: web,
   },
   {
-    title: "React Native Developer",
-    icon: mobile,
-  },
-  {
     title: "Backend Developer",
     icon: backend,
   },
   {
-    title: "Content Creator",
-    icon: creator,
+    title: "ML/DL & Data Science",
+    icon: creator, // you can replace 'creator' with a custom icon if you have one (e.g., ai, brain, data)
   },
 ];
 
@@ -88,83 +85,58 @@ const technologies = [
     name: "Tailwind CSS",
     icon: tailwind,
   },
-  {
-    name: "Node JS",
-    icon: nodejs,
-  },
+
   {
     name: "MongoDB",
     icon: mongodb,
   },
+
   {
-    name: "Three JS",
-    icon: threejs,
+    name: "Spring Boot",
+    icon: spring,
   },
+
   {
     name: "git",
     icon: git,
   },
-  {
-    name: "figma",
-    icon: figma,
-  },
+
   {
     name: "docker",
     icon: docker,
+  },
+  {
+    name: "SQL",
+    icon: sql,
   },
 ];
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
+    title: "Stage Professionnel",
+    company_name: "Bold Systeme",
+    icon: xa, // or replace with your own logo if you have one
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: "Juin 2024 – Octobre 2024",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Contribué au développement de solutions web intégrant des fonctionnalités d'intelligence artificielle.",
+      "Conçu et implémenté des algorithmes d'apprentissage automatique pour l'analyse de données.",
+      "Intégré des modèles d'IA dans des applications web afin d'améliorer les performances et les fonctionnalités.",
+      "Participé à l'optimisation et à l'amélioration continue des systèmes existants, renforçant mes compétences en développement Full-Stack et en implémentation de solutions d'IA.",
     ],
   },
+
   {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
+    title: "Stage de Fin d’Études",
+    company_name: "WeHelp - Meknès",
+    icon: wehelp, // you can replace this with your own logo if available
     iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    date: "Avril 2024 – Juin 2024",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
-    iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
-    iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Développement d’un modèle de Machine Learning pour la détection d’attaques de phishing basé sur l’analyse des URL.",
+      "Application de diverses techniques de Machine Learning pour créer, entraîner et évaluer des modèles prédictifs.",
+      "Mise en place d’un pipeline d’analyse permettant de distinguer les URL malveillantes des URL légitimes.",
+      "Participation à la documentation du processus et à l’optimisation des performances du modèle final.",
     ],
   },
 ];
@@ -198,67 +170,56 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Global Weather App",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "🌤️ Global Weather App is a simple and interactive React application that allows users to search for cities around the world, view the current weather, see a 7-day forecast, and switch between light and dark mode. Built with React, Tailwind CSS, and WeatherAPI.com.",
+    tags: [
+      { name: "react", color: "blue-text-gradient" },
+      { name: "tailwindcss", color: "pink-text-gradient" },
+      { name: "api-integration", color: "green-text-gradient" },
+    ],
+    image: wheater, // (you can import your image at the top)
+    source_code_link:
+      "https://github.com/YassineElbaite/Global-Weather-App.git",
+    live_demo_link: "https://global-weather-app-omega.vercel.app/",
+  },
+  {
+    name: "Spring React Auth",
+    description:
+      "Full-stack authentication system using Spring Boot, Spring Security, Spring MVC, MongoDB for the backend, and React for the frontend. Users can register, log in, and access a protected dashboard with role-based access.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
+      },
+      {
+        name: "springboot",
+        color: "green-text-gradient",
       },
       {
         name: "mongodb",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tailwind",
         color: "pink-text-gradient",
       },
+      {
+        name: "springsecurity",
+        color: "orange-text-gradient",
+      },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: authProjectImage, // make sure you import or define this image in your project
+    source_code_link:
+      "https://github.com/YassineElbaite/Spring_React_Auth_Project.git",
   },
   {
-    name: "Job IT",
+    name: "React Coffe-Store",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "This React coffee-store project is a modern, responsive e‑commerce template for cafés and coffee lovers It provides a full product catalog of coffee equipment and beans with category filters, search, detailed product views, and a shopping cart that supports quantity changes and checkout flow in Moroccan dirhams. ",
     tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "restapi",
-        color: "green-text-gradient",
-      },
-      {
-        name: "scss",
-        color: "pink-text-gradient",
-      },
+      { name: "react", color: "blue-text-gradient" },
+      { name: "tailwindcss", color: "pink-text-gradient" },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: image, // (you can import your image at the top)
+    source_code_link: "https://github.com/YassineElbaite/coffee-store.git",
+    live_demo_link: "https://coffee-store-lime.vercel.app/",
   },
 ];
 
